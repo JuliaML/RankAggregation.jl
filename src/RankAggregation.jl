@@ -4,6 +4,8 @@
 
 module RankAggregation
 
+using Tables
+
 """
     AggregationMethod
 
@@ -23,7 +25,7 @@ rank(::Any, ::NTuple{N,Symbol}, ::AggregationMethod) where {N} =
 #------------------
 # IMPLEMENTATIONS
 #------------------
-include("tau.jl")
+include("tau_model.jl")
 
 export
   rank,
