@@ -1,0 +1,13 @@
+name = "RankAggregation"
+uuid = "ab9d97fe-b3f0-4ed5-83d9-5747a4381b0c"
+authors = ["Júlio Hoffimann"]
+version = "0.1.0"
+
+[compat]
+julia = "1.2"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
