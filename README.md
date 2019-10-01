@@ -14,3 +14,15 @@
 Given a set of objects (e.g. rows of a table) with scores given by different scoring methods (e.g. columns), how to rank the objects? This problem is known in the literature as the rank aggregation problem.
 
 The problem is trivial when there is only one score for each object (one column), but ranking objects on the basis of multiple (conflicting) scores is challenging. This package provides algorithms to aggregate multiple scores stored in a tabular format (see [Tables.jl](https://github.com/JuliaData/Tables.jl)) into a final rank vector.
+
+## Installation
+
+Get the latest stable release with Julia's package manager:
+
+```julia
+] add RankAggregation
+```
+
+## Usage
+
+TODO
