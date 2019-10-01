@@ -1,6 +1,6 @@
 name = "RankAggregation"
 uuid = "ab9d97fe-b3f0-4ed5-83d9-5747a4381b0c"
-authors = ["Júlio Hoffimann"]
+author = "Júlio Hoffimann <julio.hoffimann@gmail.com>"
 version = "0.1.0"
 
 [compat]
