@@ -25,4 +25,30 @@ Get the latest stable release with Julia's package manager:
 
 ## Usage
 
-TODO
+Given a table with scores `score1` and `score2` for objects `a`, `b`, and `c`:
+
+```julia
+using DataFrames
+
+scores = DataFrame(object=[:a,:b,:c], score1=[0.9, 0.7, 0.5], score2=[0.8, 0.9, 0.4])
+
+3×3 DataFrame
+│ Row │ object │ score1  │ score2  │
+│     │ Symbol │ Float64 │ Float64 │
+├─────┼────────┼─────────┼─────────┤
+│ 1   │ a      │ 0.9     │ 0.8     │
+│ 2   │ b      │ 0.7     │ 0.9     │
+│ 3   │ c      │ 0.5     │ 0.4     │
+```
+
+rank the objects:
+
+```julia
+rank(scores, (:score1,:score2))
+```
+
+Alternatively, specify the rank aggregation method:
+
+```julia
+rank(scores, (:score1,:score2), TauModel())
+```
