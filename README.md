@@ -40,7 +40,7 @@ Given a table with scores `score1` and `score2` for objects `a`, `b`, and `c`:
 using DataFrames
 using RankAggregation
 
-scores = DataFrame(object=[:a,:b,:c], score1=[0.9, 0.7, 0.5], score2=[0.8, 0.9, 0.4])
+objects = DataFrame(object=[:a,:b,:c], score1=[0.9, 0.7, 0.5], score2=[0.8, 0.9, 0.4])
 
 3×3 DataFrame
 │ Row │ object │ score1  │ score2  │
@@ -54,11 +54,11 @@ scores = DataFrame(object=[:a,:b,:c], score1=[0.9, 0.7, 0.5], score2=[0.8, 0.9, 
 rank the objects using:
 
 ```julia
-rank(scores, (:score1,:score2))
+rank(objects, (:score1,:score2))
 ```
 
 Alternatively, specify the aggregation method:
 
 ```julia
-rank(scores, (:score1,:score2), TauModel())
+rank(objects, (:score1,:score2), TauModel())
 ```
