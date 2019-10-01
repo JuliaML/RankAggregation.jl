@@ -41,13 +41,13 @@ scores = DataFrame(object=[:a,:b,:c], score1=[0.9, 0.7, 0.5], score2=[0.8, 0.9, 
 │ 3   │ c      │ 0.5     │ 0.4     │
 ```
 
-rank the objects:
+rank the objects using:
 
 ```julia
 rank(scores, (:score1,:score2))
 ```
 
-Alternatively, specify the rank aggregation method:
+Alternatively, specify the aggregation method:
 
 ```julia
 rank(scores, (:score1,:score2), TauModel())
