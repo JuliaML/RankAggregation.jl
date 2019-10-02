@@ -12,11 +12,10 @@ Probabilistic rank aggregation with the Tau model.
 * Journel 2002. Combining Knowledge From Diverse Sources:
   An Alternative to Traditional Data Independence Hypotheses.
 """
-struct TauModel <: AggregationMethod
-end
+struct TauModel <: AggregationMethod end
 
-function rank(objects, scores::NTuple{N,Symbol},
-              method::TauModel) where {N}
+function rank_impl(objects, scores::NTuple{N,Symbol},
+                   method::TauModel) where {N}
   # score columns
   cols = []
   for col in propertynames(objects)
