@@ -16,8 +16,8 @@ abstract type AggregationMethod end
 """
     rank(objects, scores, [method])
 
-Rank `objects` stored in a tabular format according to
-`scores` columns and aggregation `method`.
+Rank `objects` stored in a tabular format on the basis of
+`scores` columns and with an aggregation `method`.
 """
 rank(::Any, ::NTuple{N,Symbol}, ::AggregationMethod) where {N} =
   @error "not implemented"
@@ -28,7 +28,8 @@ rank(::Any, ::NTuple{N,Symbol}, ::AggregationMethod) where {N} =
 include("tau_model.jl")
 
 export
-  rank,
-  TauModel
+  AggregationMethod,
+  TauModel,
+  rank
 
 end # module
