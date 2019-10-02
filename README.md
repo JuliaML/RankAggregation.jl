@@ -37,11 +37,10 @@ Get the latest stable release with Julia's package manager:
 Given a table with scores `score1` and `score2` for objects `a`, `b`, and `c`:
 
 ```julia
-using DataFrames
-using RankAggregation
+julia> using DataFrames
+julia> using RankAggregation
 
-objects = DataFrame(object=[:a,:b,:c], score1=[0.9, 0.7, 0.5], score2=[0.8, 0.9, 0.4])
-
+julia> objects = DataFrame(object=[:a,:b,:c], score1=[0.9, 0.7, 0.5], score2=[0.8, 0.9, 0.4])
 3×3 DataFrame
 │ Row │ object │ score1  │ score2  │
 │     │ Symbol │ Float64 │ Float64 │
@@ -54,11 +53,54 @@ objects = DataFrame(object=[:a,:b,:c], score1=[0.9, 0.7, 0.5], score2=[0.8, 0.9,
 rank the objects using:
 
 ```julia
-rank(objects, (:score1,:score2))
+julia> rank(objects, (:score1,))
+3-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 
+ julia> rank(objects, (:score2,))
+3-element Array{Int64,1}:
+ 2
+ 1
+ 3
+ 
+ julia> rank(objects, (:score1,:score2))
+3-element Array{Int64,1}:
+ 1
+ 2
+ 3
 ```
 
-Alternatively, specify the aggregation method:
+Optionally, specify the aggregation method:
 
 ```julia
-rank(objects, (:score1,:score2), TauModel())
+julia> rank(objects, (:score1,:score2), TauModel())
+3-element Array{Int64,1}:
+ 1
+ 2
+ 3
 ```
+
+and the reverse option:
+
+```julia
+julia> rank(objects, (:score1,:score2), rev=true)
+3-element Array{Int64,1}:
+ 3
+ 2
+ 1
+```
+
+## Aggregation Methods
+
+| Method | References |
+|--------|------------|
+| `TauModel` | Journel 2002. Combining Knowledge From Diverse Sources: An Alternative to Traditional Data Independence Hypotheses. |
+
+## Contributing
+
+Contributions are very welcome, as are feature requests and suggestions.
+
+Please [open an issue](https://github.com/juliohm/RankAggregation.jl/issues) if you encounter
+any problems.
