@@ -1,10 +1,10 @@
 <p align="center">
   <img src="docs/RankAggregation.png" height="200"><br>
-  <a href="https://travis-ci.org/juliohm/RankAggregation.jl">
-    <img src="https://travis-ci.org/juliohm/RankAggregation.jl.svg?branch=master">
+  <a href="https://travis-ci.org/JuliaEarth/RankAggregation.jl">
+    <img src="https://travis-ci.org/JuliaEarth/RankAggregation.jl.svg?branch=master">
   </a>
-  <a href="https://codecov.io/gh/juliohm/RankAggregation.jl">
-    <img src="https://codecov.io/gh/juliohm/RankAggregation.jl/branch/master/graph/badge.svg">
+  <a href="https://codecov.io/gh/JuliaEarth/RankAggregation.jl">
+    <img src="https://codecov.io/gh/JuliaEarth/RankAggregation.jl/branch/master/graph/badge.svg">
   </a>
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/license-ISC-blue.svg">
@@ -102,5 +102,5 @@ julia> rank(objects, (:score1,:score2), rev=true)
 
 Contributions are very welcome, as are feature requests and suggestions.
 
-Please [open an issue](https://github.com/juliohm/RankAggregation.jl/issues) if you encounter
+Please [open an issue](https://github.com/JuliaEarth/RankAggregation.jl/issues) if you encounter
 any problems.
