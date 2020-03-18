@@ -53,18 +53,18 @@ julia> objects = DataFrame(object=[:a,:b,:c], score1=[0.9, 0.7, 0.5], score2=[0.
 rank the objects using:
 
 ```julia
-julia> rank(objects, (:score1,))
+julia> rank(objects, :score1)
 3-element Array{Int64,1}:
  1
  2
  3
- 
- julia> rank(objects, (:score2,))
+
+ julia> rank(objects, :score2)
 3-element Array{Int64,1}:
  2
  1
  3
- 
+
  julia> rank(objects, (:score1,:score2))
 3-element Array{Int64,1}:
  1

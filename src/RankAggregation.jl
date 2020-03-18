@@ -26,6 +26,9 @@ function rank(objects, scores::NTuple{N,Symbol},
   rev ? length(r) .- r .+ 1 : r
 end
 
+rank(objects, score::Symbol, method::AggregationMethod=TauModel(); rev=false) =
+  rank(objects, (score,), method, rev=rev)
+
 rank_impl(::Any, ::NTuple{N,Symbol}, ::AggregationMethod) where {N} =
   @error "not implemented"
 
